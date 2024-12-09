@@ -16,7 +16,14 @@ export class PlacesService {
       params: {
         input: text,
         inputtype: PlaceInputType.textQuery,
-        fields: ['place_id', 'formatted_address', 'geometry', 'name'],
+        fields: [
+          'place_id',
+          'formatted_address',
+          'geometry',
+          'name',
+          'lat',
+          'lng',
+        ],
         key: this.configService.get('GOOGLE_MAPS_API_KEY'),
       },
     });
